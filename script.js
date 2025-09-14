@@ -40,6 +40,7 @@ function searchProducts() {
   displayProducts(filtered);
 }
 
+
 function loadTasks() {
   let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   let list = document.getElementById("taskList");
@@ -89,7 +90,6 @@ function deleteTask(index) {
   localStorage.setItem("tasks", JSON.stringify(tasks));
   loadTasks();
 }
-
 window.onload = function () {
   if (document.getElementById("productList")) {
     displayProducts(products);
