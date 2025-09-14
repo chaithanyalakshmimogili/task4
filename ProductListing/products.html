@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">🛒 Product Store</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="todo.html">To-Do</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="controls">
+    <input type="text" id="searchInput" placeholder="🔍 Search products..." onkeyup="searchProducts()">
+    <label for="sortOption">Sort By:</label>
+    <select id="sortOption" onchange="sortProducts()">
+      <option value="">Default</option>
+      <option value="price">Price (Low → High)</option>
+      <option value="rating">Rating (High → Low)</option>
+    </select>
+  </section>
+
+  <section id="productList" class="product-grid">
+    <!-- Products injected via JS -->
+  </section>
+
+  <footer>
+    <p>© 2025 Product Store</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
